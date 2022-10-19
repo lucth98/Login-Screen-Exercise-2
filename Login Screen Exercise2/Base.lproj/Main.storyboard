@@ -19,6 +19,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="7Ix-Cj-Csu">
                                 <rect key="frame" x="0.0" y="107" width="390" height="266"/>
                                 <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="wNr-hE-sEV">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="0.0"/>
+                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNZ-Pw-4Xq">
                                         <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -28,7 +31,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1l-qs-fVl">
                                         <rect key="frame" x="0.0" y="38.333333333333343" width="390" height="85"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5c-gk-T7I">
                                         <rect key="frame" x="0.0" y="141.33333333333334" width="78" height="20.333333333333343"/>
@@ -39,13 +42,16 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-Pb-P8m">
                                         <rect key="frame" x="0.0" y="179.66666666666669" width="390" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="q8B-Sg-8b6">
                                         <rect key="frame" x="0.0" y="231.66666666666666" width="65.666666666666671" height="34.333333333333343"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IF5-eA-l6i"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -62,6 +68,12 @@
                             <constraint firstItem="7Ix-Cj-Csu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="khR-Ln-ziD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indecator" destination="wNr-hE-sEV" id="fFl-an-y68"/>
+                        <outlet property="logInButton" destination="q8B-Sg-8b6" id="SuE-oa-awe"/>
+                        <outlet property="textFieldEmail" destination="h1l-qs-fVl" id="kCr-MV-8Ll"/>
+                        <outlet property="textFieldPassword" destination="XqW-Pb-P8m" id="DKy-3d-GIV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
