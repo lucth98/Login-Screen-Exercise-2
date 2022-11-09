@@ -37,6 +37,7 @@ class ViewController: UIViewController  ,UITextFieldDelegate {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        //networkTest()
         
         guard let email = textFieldEmail?.text else{
             drawAlert("Error ", "Countaint of Textfield email is nil")
@@ -55,6 +56,10 @@ class ViewController: UIViewController  ,UITextFieldDelegate {
         disableUiElements()
         self.enableIndicator()
         
+        
+        var networking: Networking = Networking()
+        networking.login(email, password)
+        /*
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
           // This code executes after 2 seconds
           // Check here if the login was successful
@@ -68,7 +73,14 @@ class ViewController: UIViewController  ,UITextFieldDelegate {
                 self.cleanElements()
             }
         }
+        */
         
+        
+    }
+    
+    func networkTest(){
+        var networking: Networking = Networking()
+        networking.login("test", "test 2")
     }
     
     func drawAlert(_ titleOfAlert:String,_ messageOfAlert:String){

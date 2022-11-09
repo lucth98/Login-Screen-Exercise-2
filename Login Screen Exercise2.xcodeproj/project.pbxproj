@@ -16,6 +16,10 @@
 		A017259928EDF8D9005DA033 /* Login_Screen_Exercise2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017259828EDF8D9005DA033 /* Login_Screen_Exercise2Tests.swift */; };
 		A01725A328EDF8D9005DA033 /* Login_Screen_Exercise2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01725A228EDF8D9005DA033 /* Login_Screen_Exercise2UITests.swift */; };
 		A01725A528EDF8D9005DA033 /* Login_Screen_Exercise2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01725A428EDF8D9005DA033 /* Login_Screen_Exercise2UITestsLaunchTests.swift */; };
+		A0E65411290C4D2D0000889D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E65410290C4D2D0000889D /* Networking.swift */; };
+		A0E654132914064A0000889D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E654122914064A0000889D /* User.swift */; };
+		A0ED7343291BF43800603F73 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ED7342291BF43800603F73 /* NetworkingError.swift */; };
+		A0ED7345291BFC6700603F73 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ED7344291BFC6700603F73 /* ResponseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		A017259E28EDF8D9005DA033 /* Login Screen Exercise2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login Screen Exercise2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01725A228EDF8D9005DA033 /* Login_Screen_Exercise2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Screen_Exercise2UITests.swift; sourceTree = "<group>"; };
 		A01725A428EDF8D9005DA033 /* Login_Screen_Exercise2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Screen_Exercise2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A0E65410290C4D2D0000889D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A0E654122914064A0000889D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A0ED7342291BF43800603F73 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		A0ED7344291BFC6700603F73 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				A017258A28EDF8D9005DA033 /* Assets.xcassets */,
 				A017258C28EDF8D9005DA033 /* LaunchScreen.storyboard */,
 				A017258F28EDF8D9005DA033 /* Info.plist */,
+				A0E65410290C4D2D0000889D /* Networking.swift */,
+				A0E654122914064A0000889D /* User.swift */,
+				A0ED7342291BF43800603F73 /* NetworkingError.swift */,
+				A0ED7344291BFC6700603F73 /* ResponseError.swift */,
 			);
 			path = "Login Screen Exercise2";
 			sourceTree = "<group>";
@@ -261,6 +273,10 @@
 				A017258628EDF8D8005DA033 /* ViewController.swift in Sources */,
 				A017258228EDF8D8005DA033 /* AppDelegate.swift in Sources */,
 				A017258428EDF8D8005DA033 /* SceneDelegate.swift in Sources */,
+				A0E654132914064A0000889D /* User.swift in Sources */,
+				A0ED7343291BF43800603F73 /* NetworkingError.swift in Sources */,
+				A0E65411290C4D2D0000889D /* Networking.swift in Sources */,
+				A0ED7345291BFC6700603F73 /* ResponseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
