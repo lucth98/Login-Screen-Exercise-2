@@ -30,10 +30,15 @@ class Networking{
         
         let dataTask = URLSession.shared.dataTask(with: urlRequest){ data, response, error in
             print("recived Data: ")
-            print(String(data: data!, encoding: .utf8)!)
+            print(String(data: data ?? Data(), encoding: .utf8)!)
             
-            print(response)
-            print(error)
+            print("")
+            print("responce:")
+            print(response ?? "no Responce")
+            
+            print("")
+            print("error:")
+            print(error ?? "no Error")
             
             /*
             print(response)
@@ -43,32 +48,34 @@ class Networking{
             let jsonDecoder = JSONDecoder()
             
             
-            
-            do{
-                
-                let recivedUser:User =  try jsonDecoder.decode(User.self, from: data!)
-                
-                print("decodet user:")
-                print(recivedUser.toString())
-                 
-            }catch{
+            if data != nil{
                 do{
-                    let recivedError:ResponseError =  try jsonDecoder.decode(ResponseError.self , from: data!)
                     
-                    print("decodet Error")
-                    print(recivedError.toString())
+                    let recivedUser:User =  try jsonDecoder.decode(User.self, from: data!)
+                    
+                    print("decodet user:")
+                    print(recivedUser.toString())
+                    
                 }catch{
-                    print("Error cant be decodet")
+                    do{
+                        let recivedError:ResponseError =  try jsonDecoder.decode(ResponseError.self , from: data!)
+                        
+                        print("decodet Error")
+                        print(recivedError.toString())
+                    }catch{
+                        print("Error cant be decodet")
+                    }
+                    
                 }
-                
+            }
+            
+            if let errorNs = error as NSError?{
+                var errorString:String = errorNs.localizedDescription
+                print("ERROR to String: ")
+                print(errorString)
             }
              
-                
-               
-                  
-               //test
-             
-            
+    
         }
         dataTask.resume()
     }
